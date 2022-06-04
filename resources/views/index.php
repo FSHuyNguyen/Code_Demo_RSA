@@ -42,11 +42,10 @@
                         <textarea disabled name="" id="result_decode_text" style="width:100%;" rows="10"></textarea>
                     </div>
                 </div>
-                <div style="margin-top:20px;">
+                <div style="margin-top:20px;align-items:center;">
                     <input type="hidden" name="" id="public_key" value="">
                     <Button style="background-color: blue;" class="btn" id="encryptBtn">Mã hoá</Button>
                     <Button style="background-color: rgba(252, 252, 1, 0.726);" class="btn" id="decryptBtn">Giải mã</Button>
-                    <Button style="background-color: red;" class="btn" id="open_file">Nhập file</Button>
                 </div>
             </div>
         </div>
