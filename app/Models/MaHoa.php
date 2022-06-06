@@ -15,9 +15,9 @@ class MaHoa extends Model
         return $encrypt;
     }
 
-    public function decrypt($String, $public_key)
+    public function decrypt($String, $private_key)
     {
-        $decrypt = _decrypt($String, $public_key);
+        $decrypt = _decrypt($String, $private_key);
         return $decrypt;
     }
 }

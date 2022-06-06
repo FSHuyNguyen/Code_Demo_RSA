@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div style="margin-top:20px;align-items:center;">
-                    <input type="hidden" name="" id="public_key" value="">
+                    <input type="hidden" name="" id="private_key" value="">
                     <Button style="background-color: blue;" class="btn" id="encryptBtn">Mã hoá</Button>
                     <Button style="background-color: rgba(252, 252, 1, 0.726);" class="btn" id="decryptBtn">Giải mã</Button>
                 </div>
@@ -64,7 +64,7 @@
                 success: function(res) {
                     if (res.status === 200) {
                         $('#result_encode_text').html(res.encode);
-                        $("#public_key").val(res.public_key);
+                        $("#private_key").val(res.private_key);
                     }
                 }
             })
@@ -72,13 +72,13 @@
 
         $('#decryptBtn').click(function() {
             let input_decode = $("#input_text").val();
-            let public_key = document.getElementById('public_key').value;
+            let private_key = document.getElementById('private_key').value;
             $.ajax({
                 type: 'post',
                 url: 'decrypt',
                 data: {
                     'input_text': input_decode,
-                    'public_key': public_key,
+                    'private_key': private_key,
                 },
                 success: function(res) {
                     if (res.status === 200) {

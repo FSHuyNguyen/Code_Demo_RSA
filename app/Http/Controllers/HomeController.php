@@ -29,11 +29,11 @@ class HomeController extends Controller
     public function decrypt(Request $request)
     {
         $input_text = $request->input_text;
-        $public_key = $request->public_key;
+        $private_key = $request->private_key;
         if (isset($input_text)) {
             $status = 200;
             $Mahoa = new MaHoa;
-            $result = $Mahoa->decrypt($input_text, $public_key);
+            $result = $Mahoa->decrypt($input_text, $private_key);
         } else {
             $status = 404;
             $result = Null;

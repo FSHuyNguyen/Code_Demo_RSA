@@ -8,10 +8,9 @@ function _encrypt($String)
     $plaintext = $String;
 
     // Mã hoá chuỗi plaintext
-    $rsa->loadKey($privatekey);
+    $rsa->loadKey($publickey);
     $ciphertext = $rsa->encrypt($plaintext);
 
-    // trả về base64_encode($ciphertext);
     return array(
         'encode' => base64_encode($ciphertext),
         'private_key' => $privatekey,
