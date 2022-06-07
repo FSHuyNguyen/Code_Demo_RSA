@@ -23,7 +23,7 @@ class HomeController extends Controller
             $private_key = Null;
         }
 
-        return response()->json(['status' => $status, 'encode' => $encode, 'private_key' => $private_key, 'public_key' => $result['public_key']]);
+        return response()->json(['status' => $status, 'encode' => $encode, 'private_key' => $private_key, 'public_key' => $public_key]);
     }
 
     public function decrypt(Request $request)
